@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #25303B;
+    font-family: Helvetica, sans-serif;
+    margin: 8px 33px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    position: relative;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    background-color: #525A63;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+}
+
+.container {
+    background-color: white;
+    width: 40%;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    position: relative;
+    left: 0;
+}
+
+.container::before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -9px;
+}
+
+.container:nth-child(even) {
+    left: 60%;
+}
+
+.container:nth-child(even)::before {
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 0;
+    left: -9px;
+}
+
+.container:nth-child(1)::before {
+    border-left: 10px solid #E54D42;
+}
+
+.container:nth-child(1) .header {
+    background-color: #E54D42;
+}
+
+.container:nth-child(2)::before {
+    border-right: 10px solid #00C56A;
+}
+
+.container:nth-child(2) .header {
+    background-color: #00C56A;
+}
+
+.container:nth-child(3)::before {
+    border-left: 10px solid #EB732C;
+}
+
+.container:nth-child(3) .header {
+    background-color: #EB732C;
+}
+
+.container:nth-child(4)::before {
+    border-right: 10px solid #00B392;
+}
+
+.container:nth-child(4) .header {
+    background-color: #00B392;
+}
+
+.container:nth-child(5)::before {
+    border-left: 10px solid #944FAA;
+}
+
+.container:nth-child(5) .header {
+    background-color: #944FAA;
+}
+
+.header {
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+}
+
+.content {
+    padding: 10px;
+    margin: 0;
+    color: #928F8E;
+    line-height: 1.2;
+    font-size: 14px;
+}
+
+.container:nth-child(even) .date {
+    left: -30%;
+}
+
+.date {
+    position: absolute;
+    left: 120%;
+    top: 0;
+    box-shadow: 0 0 0 10px #25303B;
+    color: #999DA1;
+    border: 1px solid #464F58;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 9999999;
+    background-color: #25303B;
+}
+
+.small-text {
+    font-size: 10px;
+}
+
+.month {
+    font-weight: bold;
+    font-size: 14px;
+}
+
