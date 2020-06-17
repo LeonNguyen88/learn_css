@@ -148,7 +148,7 @@ body {
     }
 
     .container:nth-child(even)::before {
-        left: 0;
+        left: 100%;
     }
 
     .wrapper::after {
@@ -164,7 +164,17 @@ body {
     }
 
     .container:nth-child(even) .date {
+        left: 115%;
+    }
 
+    .container:nth-child(2)::before {
+        border-left: 10px solid #00C56A;
+        border-right: 0;
+    }
+
+    .container:nth-child(4)::before {
+        border-left: 10px solid #00B392;
+        border-right: 0;
     }
 }
 
