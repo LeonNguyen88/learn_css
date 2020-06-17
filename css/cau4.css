@@ -142,3 +142,29 @@ body {
     font-size: 14px;
 }
 
+@media only screen and (max-width: 767px) {
+    .container:nth-child(even) {
+        left: 0;
+    }
+
+    .container:nth-child(even)::before {
+        left: 0;
+    }
+
+    .wrapper::after {
+        left: 100%;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .date {
+        left: 115%;
+    }
+
+    .container:nth-child(even) .date {
+
+    }
+}
+
