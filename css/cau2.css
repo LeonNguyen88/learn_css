@@ -8,31 +8,20 @@ body {
     padding: 30px 50px;
 }
 
-.section:first-child {
-    margin-bottom: 60px;
-}
-
 .col-6 {
     width: calc(50% - 35px);
     height: 480px;
     min-height: 1px;
     float: left;
     margin-right: 35px;
-    border-left: 1px solid #5AFFED;
-    border-right: 1px solid #5AFFED;
 }
 
-.col-6:last-child {
+.col-6:nth-child(even) {
+    float: right;
+}
+
+.col-6:nth-child(odd) {
     margin-right: 0;
-}
-
-.col-3 {
-    width: 33.3%;
-    min-height: 1px;
-    float: left;
-    border-left: 1px solid #5AFFED;
-    border-right: 1px solid #5AFFED;
-    padding-top: 15px;
 }
 
 .thumbnail {
@@ -45,19 +34,10 @@ body {
     margin-bottom: 32px;
 }
 
-.section > .title {
-    margin-bottom: 10px;
-}
-
-.box-paragraph {
+.content {
     border: 1px solid #707070;
     border-left: none;
     padding: 30px;
-}
-
-.text-paragraph {
-    padding: 0 25px;
-    font-size: 15px;
 }
 
 .clearfix:after {
@@ -70,9 +50,24 @@ body {
     .col-6 {
         width: 100%;
         height: auto;
+        margin: 0;
+    }
+
+    .col-6:nth-child(even) {
+        float: none;
+        padding-top: 15px;
     }
 
     .col-3 {
         width: 100%;
+    }
+
+    .content {
+        border: 0;
+        padding: 0 25px;
+    }
+
+    .title {
+        margin-bottom: 10px;
     }
 }
